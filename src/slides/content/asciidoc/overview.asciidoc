@@ -1,0 +1,87 @@
+++++
+<div class="horizontal-block" id="Overview">
+<div class="col cardoverview c2-1 c3-1 c4-1 c5-1 c6-1"><div class="blk">
+++++
+
+[options="header", cols="a"]
+|===
+1+| Liquibase Philosophy
+|
+Liquibase, is an Apache Licensed open source library written in Java for tracking, managing and applying database changes. +
+ +
+All changes to the database are stored in XML files and identified by a combination of an "id" and "author" tag as well as the 
+name of the file itself. A list of all applied changes is stored in each database which is consulted on all database updates 
+to determine what new changes need to be applied. As a result, there is no database version number but this approach allows 
+it to work in environments with multiple developers and code branches.
+
+|===
+
+++++
+</div></div>
+
+<div class="col cardoverview c2-2 c3-2 c4-2 c5-2 c6-2"><div class="blk">
+++++
+
+[options="header" cols="a"]
+|===
+1+| Liquibase Links
+|
+
+- Liquibase Website: link:www.liquibase.org/[www.liquibase.org/]
+- Liquibase Source Code: link:https://github.com/liquibase/liquibase[https://github.com/liquibase/liquibase]
+- Liquibase Manual: link:http://www.liquibase.org/documentation[http://www.liquibase.org/documentation/]
+
+|===
+
+
+++++
+</div></div>
+
+<div class="col cardoverview c2-2 c3-3 c4-3 c5-3 c6-3"><div class="blk">
+++++
+
+[options="header", cols="1m,2"]
+|===
+2+| CONCEPTS
+| Changelog file | Developers store database changes in text-based files on their local development machines and apply them to their local databases.
+| Change Set | Change Sets are uniquely identified by the "author" and "id" attribute along with with the location of the changelog file and are the units Liquibase tracks execution of.
+| Changes | Each changeset generally contains a change which describes the change/refactoring to apply to the database. Liquibase supports both descriptive changes that generate SQL for supported databases and raw SQL.
+| Preconditions | Preconditions can be applied to either the changelog as a whole or individual change sets. If a precondition fails, Liquibase will stop execution.
+| Contexts | Contexts can be applied to changesets to control which are ran in different environments. For example, some changesets can be tagged as "production" and others as "test". If no context is specified, the changeset will run regardless of the execution context
+|===
+
+++++
+</div></div>
+
+<div class="col cardoverview c2-1 c3-3 c4-4 c5-4 c6-4"><div class="blk">
+++++
+[options="header", cols="a"]
+|===
+1+| FEATURES
+|
+
+- Over 30 built-in database refactorings
+- Extensibility to create custom changes
+- Update database to current version
+- Rollback last X changes to database
+- Rollback database changes to particular date/time
+- Rollback database to "tag"
+- SQL for Database Updates and Rollbacks can be saved for manual review
+- Stand-alone IDE and Eclipse plug-in
+- "Contexts" for including/excluding change sets to execute
+- Database diff report
+- Database diff changelog generation
+- Ability to create changelog to generate an existing database
+- Database change documentation generation
+- DBMS Check, user check, and SQL check preconditions
+- Ability to split change log into multiple files for easier management
+- Executable via command line, Ant, Maven, Servlet container, or Spring
+- Support for 10 database systems
+
+|===
+
+++++
+</div></div>
+
+</div>
+++++

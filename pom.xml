@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>net.arunoday</groupId>
+  <artifactId>liquibase-refcard</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Liquibase Reference Card</name>
+  <packaging>pom</packaging>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.asciidoctor</groupId>
+        <artifactId>asciidoctor-maven-plugin</artifactId>
+        <version>0.1.3.1</version>
+		<executions>
+          <execution>
+            <id>output-html</id>
+            <phase>pre-site</phase>
+            <goals>
+              <goal>process-asciidoc</goal>
+            </goals>
+          </execution>
+        </executions>        
+        <configuration>
+		  <sourceDirectory>${slides.input}/content/</sourceDirectory>
+          <outputDirectory>${slides.output}</outputDirectory>        
+          <synchronizations>
+            <synchronization>
+              <source>${slides.input}/resources</source>
+              <target>${slides.output}</target>
+            </synchronization>
+          </synchronizations>
+
+          <title>Liquibase RefCard</title>
+          <home>refcard</home>
+
+          <attributes>
+            <description>RefCard</description>
+            <keywords>refcard</keywords>
+
+            <author>Aparna Chaudhary</author>
+            <email>aparna.chaudhary@gmail.com</email>
+            <revdate>${maven.build.timestamp}</revdate>
+            <revnumber>${project.version}</revnumber>
+
+            <highlightjsdir>js</highlightjsdir>
+            <highlightjs-theme>github</highlightjs-theme>
+          </attributes>
+
+
+          <backend>html5</backend>
+          <compact>true</compact>
+          <headerFooter>true</headerFooter>
+          <sourceHighlighter>highlightjs</sourceHighlighter>
+
+          <templateDir>${slides.input}/backend</templateDir>
+          <templateEngine />
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <properties>
+    <slides.input>${project.basedir}/src/slides</slides.input>
+    <slides.output>${project.build.directory}/refcard</slides.output>
+  </properties>
+</project>
+

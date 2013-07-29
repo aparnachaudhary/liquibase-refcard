@@ -1,10 +1,9 @@
-
 ++++
 <div class="horizontal-block" id="Commands">
 <div class="col cardcommands c2-1 c3-1 c4-1 c5-1 c6-1"><div class="blk">
 ++++
 
-[options="header", cols="2"]
+[options="header", cols="1m,2"]
 |===
 2+| Liquibase Commands
 | Update        | Liquibase allows you to apply database changes you and other developers have added to the change log file.
@@ -14,6 +13,22 @@
 | DBDoc         | Using change information stored in the change logs and an existing database, Liquibase can generate database change documentation.
 |===
 
+
+++++
+</div></div>
+
+<div class="col cardcommands c2-1 c3-1 c4-1 c5-1 c6-1"><div class="blk">
+++++
+
+[options="header", cols="a"]
+|===
+1+| Best Practices
+|
+
+- Avoid multiple changes per changeset to avoid failed autocommit statements that can leave the database in an unexpected state.
+- B
+
+|===
 
 ++++
 </div></div>
@@ -59,7 +74,7 @@
 ++++
 </div></div>
 
-<div class="col cardcommands c2-2 c3-3 c4-3 c5-3 c6-3"><div class="blk">
+<div class="col cardcommands c2-1 c3-3 c4-3 c5-3 c6-3"><div class="blk">
 ++++
 
 [options="header", cols="3"]
@@ -82,21 +97,6 @@
 ++++
 </div></div>
 
-<div class="col cardcommands c2-1 c3-3 c4-4 c5-4 c6-4"><div class="blk">
-++++
-
-[options="header", cols="a"]
-|===
-1+| Best Practices
-|
-
-- Avoid multiple changes per changeset to avoid failed autocommit statements that can leave the database in an unexpected state.
-- B
-
-|===
-
-++++
-</div></div>
 
 </div>
 ++++

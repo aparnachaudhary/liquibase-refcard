@@ -80,18 +80,18 @@
 [options="header", cols="3"]
 |===
 3+| DML and MISC CHANGES
-| CHANGE| DESCRIPTION|ROLLBACK SUPPORT
-| customChange| Although Liquibase tries to provide a wide range of database refactorings, there are times you may want to create your own custom refactoring class.|N
-| delete| Deletes data from an existing table|N
-| executeCommand| Executes a system command. Because this refactoring doesn't generate SQL like most, using LiquiBase commands such as migrateSQL may not work as expected. Therefore, if at all possible use refactorings that generate SQL.|N
-| insert| Inserts data into an existing table|N
-| loadData| Loads data from a CSV file into an existing table. A value of NULL in a cell will be converted to a database NULL rather than the string 'NULL'|N
-| loadUpdateData| Loads or updates data from a CSV file into an existing table. Differs from loadData by issuing a SQL batch that checks for the existence of a record. If found, the record is UPDATEd, else the record is INSERTed. Also, generates DELETE statements for a rollback. |N
-| mergeColumns| Concatenates the values in two columns, joins them by with string, and stores the resulting value in a new column. |N
-| sql| The 'sql' tag allows you to specify whatever sql you want. It is useful for complex changes that aren't supported through Liquibase's automated refactoring tags and to work around bugs and limitations of Liquibase. The SQL contained in the sql tag can be multi-line. |N
-| sqlFile| The 'sqlFile' tag allows you to specify any sql statements and have it stored external in a file. It is useful for complex changes that are not supported through LiquiBase's automated refactoring tags such as stored procedures. |N
-| tagDatabase | Applies a tag to the database for future rollback |N
-| update| Updates data in an existing table |N
+| CHANGE         | DESCRIPTION|ROLLBACK SUPPORT
+| customChange   | Although Liquibase tries to provide a wide range of database refactorings, there are times you may want to create your own custom refactoring class.|N
+| delete         | Deletes data from an existing table|N
+| executeCommand | Executes a system command. Because this refactoring doesn't generate SQL like most, using LiquiBase commands such as migrateSQL may not work as expected. Therefore, if at all possible use refactorings that generate SQL.|N
+| insert         | Inserts data into an existing table|N
+| loadData       | Loads data from a CSV file into an existing table. A value of NULL in a cell will be converted to a database NULL rather than the string 'NULL'|N
+| loadUpdateData | Loads or updates data from a CSV file into an existing table. Differs from loadData by issuing a SQL batch that checks for the existence of a record. If found, the record is UPDATEd, else the record is INSERTed. Also, generates DELETE statements for a rollback. |N
+| mergeColumns   | Concatenates the values in two columns, joins them by with string, and stores the resulting value in a new column. |N
+| sql            | The 'sql' tag allows you to specify whatever sql you want. It is useful for complex changes that aren't supported through Liquibase's automated refactoring tags and to work around bugs and limitations of Liquibase. The SQL contained in the sql tag can be multi-line. |N
+| sqlFile        | The 'sqlFile' tag allows you to specify any sql statements and have it stored external in a file. It is useful for complex changes that are not supported through LiquiBase's automated refactoring tags such as stored procedures. |N
+| tagDatabase    | Applies a tag to the database for future rollback |N
+| update         | Updates data in an existing table |N
 |===
 
 ++++

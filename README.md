@@ -1,4 +1,0 @@
-liquibase-refcard
-=================
-
-Liquibase RefCard

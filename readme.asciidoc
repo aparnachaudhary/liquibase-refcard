@@ -1,0 +1,26 @@
+== Liquibase RefCard ==
+
+This project creates a reference card for Liquibase.
+
+=== Building ===
+
+.Requirements
+* Apache Maven version 3,
+
+To build, issue this from the command line:
+[source]
+----
+mvn asciidoctor:http
+----
+
+The refcard is available on http://localhost:200
+
+You can generate a zip archive of the site with:
+
+[source]
+----
+mvn asciidoctor:zip
+----
+
+
+=== How it works ===

@@ -77,7 +77,7 @@
 1+| Best Practices
 |
 
-- A
+- Avoid multiple changes per changeset to avoid failed autocommit statements that can leave the database in an unexpected state.
 - B
 
 |===

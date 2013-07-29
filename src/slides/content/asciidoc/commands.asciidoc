@@ -3,14 +3,14 @@
 <div class="col cardcommands c2-1 c3-1 c4-1 c5-1 c6-1"><div class="blk">
 ++++
 
-[options="header", cols="3"]
+[options="header", cols="2"]
 |===
-3+| Liquibase Commands
-| Update       | ddd|Y
-| Rollback         | `=`, `<>`, `<`, `>`, `<=`, `>=`|N
-| Diff            | `AND`, `OR`, `NOT`|Y
-| SQL Output             | `+`|N
-| DBDoc         | `+`, `IN`|Y
+2+| Liquibase Commands
+| Update        | Liquibase allows you to apply database changes you and other developers have added to the change log file.
+| Rollback      | Liquibase allows you to undo changes you have made to your database, either automatically or via custom rollback SQL.
+| Diff          | While the best way to track database changes is by adding change sets during development, there are times when being able to perform database diffs is valuable, particularly near the end of a project as a double-check that all required changes are included in the change log.
+| SQL Output    | Depending on your development and release processes, you may not want Liquibase to directly update your database. 
+| DBDoc         | Using change information stored in the change logs and an existing database, Liquibase can generate database change documentation.
 |===
 
 

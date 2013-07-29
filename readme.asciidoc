@@ -13,7 +13,7 @@ To build, issue this from the command line:
 mvn asciidoctor:http
 ----
 
-The refcard is available on http://localhost:200
+The refcard is available on http://localhost:2000
 
 You can generate a zip archive of the site with:
 

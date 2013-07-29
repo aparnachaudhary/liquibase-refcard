@@ -2,10 +2,10 @@
 
 This project creates a reference card for Liquibase.
 
-=== Building ===
+=== Building: ===
 
-.Requirements
-* Apache Maven version 3,
+.Requirements:
+* Apache Maven version 3
 
 To build, issue this from the command line:
 [source]
@@ -23,4 +23,4 @@ mvn asciidoctor:zip
 ----
 
 
-=== How it works ===
+=== How it works: ===

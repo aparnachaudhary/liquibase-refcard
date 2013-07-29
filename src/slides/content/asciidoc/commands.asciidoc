@@ -25,12 +25,17 @@
 3+| Changes
 | CHANGE| DESCRIPTION|ROLLBACK SUPPORT
 | addAutoIncrement   | Converts an existing column to be an auto-increment column|Y
-| addColumn          | Adds a new column to an existing table|N
+| addColumn          | Adds a new column to an existing table|Y
 | addDefaultValue    | Adds a default value to the database definition for the specified column. One of defaultValue, defaultValueNumeric, defaultValueBoolean or defaultValueDate must be set|Y
-| String             | `+`|N
-| Collection         | `+`, `IN`|Y
-| Regular Expression | `=~`|Y
-| Property           | `?`, `!`|N
+| addForeignKeyConstraint| Adds a foreign key constraint to an existing column |Y
+| addLookupTable         | Creates a lookup table containing values stored in a column and creates a foreign key to the new table.|Y
+| addNotNullConstraint | Adds a not-null constraint to an existing table. If a defaultNullValue attribute is passed, all null values for the column will be updated to the passed value before the constraint is applied.|Y
+| addPrimaryKey           | Adds creates a primary key out of an existing column or set of columns. |N
+| addUniqueConstraint           | Adds a unique constrant to an existing column or set of columns. |N
+| alterSequence           | Alter properties of an existing sequence |N
+| createIndex           | Creates an index on an existing column or set of columns. |N
+| createProcedure           | Defines the definition for a stored procedure. This command is better to use for creating procedures than the raw sql command because it will not attempt to strip comments or break up lines. |N
+
 |===
 
 ++++
@@ -39,12 +44,14 @@
 <div class="col cardcommands c2-1 c3-3 c4-3 c5-3 c6-3"><div class="blk">
 ++++
 
-[options="header", cols="1"]
+[options="header", cols="a"]
 |===
 1+| Best Practices
 |
-- dsfds
-- dsfds
+
+- A
+- B
+
 |===
 
 ++++

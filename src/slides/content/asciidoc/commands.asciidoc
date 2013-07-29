@@ -1,3 +1,4 @@
+
 ++++
 <div class="horizontal-block" id="Commands">
 <div class="col cardcommands c2-1 c3-1 c4-1 c5-1 c6-1"><div class="blk">
@@ -22,7 +23,7 @@
 
 [options="header", cols="3"]
 |===
-3+| Changes
+3+| DDL CHANGES
 | CHANGE| DESCRIPTION|ROLLBACK SUPPORT
 | addAutoIncrement   | Converts an existing column to be an auto-increment column|Y
 | addColumn          | Adds a new column to an existing table|Y
@@ -38,8 +39,6 @@
 | createSequence| Creates a new database sequence|N
 | createTable| Create Table|N
 | createView| Create a new database view|N
-| customChange| Although Liquibase tries to provide a wide range of database refactorings, there are times you may want to create your own custom refactoring class.|N
-| delete| Deletes data from an existing table|N
 | dropAllForeignKeyConstraints| Drops all foreign key constraints for a table |N
 | dropColumn| Drop an existing column |N
 | dropDefaultValue| Removes the database default value for a column|N
@@ -51,17 +50,31 @@
 | dropTable| Drops an existing table|N
 | dropUniqueConstraint| Drops an existing unique constraint|N
 | dropView| Drops an existing view |N
-| executeCommand| Executes a system command. Because this refactoring doesn’t generate SQL like most, using LiquiBase commands such as migrateSQL may not work as expected. Therefore, if at all possible use refactorings that generate SQL.|N
-| insert| Inserts data into an existing table|N
-| loadData| Loads data from a CSV file into an existing table. A value of NULL in a cell will be converted to a database NULL rather than the string ‘NULL’|N
-| loadUpdateData| Loads or updates data from a CSV file into an existing table. Differs from loadData by issuing a SQL batch that checks for the existence of a record. If found, the record is UPDATEd, else the record is INSERTed. Also, generates DELETE statements for a rollback. |N
-| mergeColumns| Concatenates the values in two columns, joins them by with string, and stores the resulting value in a new column. |N
 | modifyDataType| Modify data type|N
 | renameColumn| Renames an existing column|N
 | renameTable| Renames an existing table|N
 | renameView| Renames an existing view |N
-| sql| The ‘sql’ tag allows you to specify whatever sql you want. It is useful for complex changes that aren’t supported through Liquibase’s automated refactoring tags and to work around bugs and limitations of Liquibase. The SQL contained in the sql tag can be multi-line. |N
-| sqlFile| The ‘sqlFile’ tag allows you to specify any sql statements and have it stored external in a file. It is useful for complex changes that are not supported through LiquiBase’s automated refactoring tags such as stored procedures. |N
+|===
+
+++++
+</div></div>
+
+<div class="col cardcommands c2-2 c3-3 c4-3 c5-3 c6-3"><div class="blk">
+++++
+
+[options="header", cols="3"]
+|===
+3+| DML and MISC CHANGES
+| CHANGE| DESCRIPTION|ROLLBACK SUPPORT
+| customChange| Although Liquibase tries to provide a wide range of database refactorings, there are times you may want to create your own custom refactoring class.|N
+| delete| Deletes data from an existing table|N
+| executeCommand| Executes a system command. Because this refactoring doesn't generate SQL like most, using LiquiBase commands such as migrateSQL may not work as expected. Therefore, if at all possible use refactorings that generate SQL.|N
+| insert| Inserts data into an existing table|N
+| loadData| Loads data from a CSV file into an existing table. A value of NULL in a cell will be converted to a database NULL rather than the string 'NULL'|N
+| loadUpdateData| Loads or updates data from a CSV file into an existing table. Differs from loadData by issuing a SQL batch that checks for the existence of a record. If found, the record is UPDATEd, else the record is INSERTed. Also, generates DELETE statements for a rollback. |N
+| mergeColumns| Concatenates the values in two columns, joins them by with string, and stores the resulting value in a new column. |N
+| sql| The 'sql' tag allows you to specify whatever sql you want. It is useful for complex changes that aren't supported through Liquibase's automated refactoring tags and to work around bugs and limitations of Liquibase. The SQL contained in the sql tag can be multi-line. |N
+| sqlFile| The 'sqlFile' tag allows you to specify any sql statements and have it stored external in a file. It is useful for complex changes that are not supported through LiquiBase's automated refactoring tags such as stored procedures. |N
 | tagDatabase | Applies a tag to the database for future rollback |N
 | update| Updates data in an existing table |N
 |===
@@ -69,7 +82,7 @@
 ++++
 </div></div>
 
-<div class="col cardcommands c2-1 c3-3 c4-3 c5-3 c6-3"><div class="blk">
+<div class="col cardcommands c2-1 c3-3 c4-4 c5-4 c6-4"><div class="blk">
 ++++
 
 [options="header", cols="a"]

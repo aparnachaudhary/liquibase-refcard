@@ -35,7 +35,24 @@
 | alterSequence           | Alter properties of an existing sequence |N
 | createIndex           | Creates an index on an existing column or set of columns. |N
 | createProcedure           | Defines the definition for a stored procedure. This command is better to use for creating procedures than the raw sql command because it will not attempt to strip comments or break up lines. |N
-
+| createSequence| Creates a new database sequence|N
+| createTable| Create Table|N
+| createView| Create a new database view|N
+| customChange| Although Liquibase tries to provide a wide range of database refactorings, there are times you may want to create your own custom refactoring class.|N
+| delete| Deletes data from an existing table|N
+| dropAllForeignKeyConstraints| Drops all foreign key constraints for a table |N
+| dropColumn| Drop an existing column |N
+| dropDefaultValue| Removes the database default value for a column|N
+| dropForeignKeyConstraint| Drops an existing foreign key|N
+| dropIndex| Drops an existing index|N
+| dropNotNullConstraint| Makes a column nullable|N
+| dropPrimaryKey| Drops an existing primary key|N
+| dropSequence| Drop an existing sequence|N
+| dropTable| Drops an existing table|N
+| dropUniqueConstraint| Drops an existing unique constraint|N
+| dropView| Drops an existing view |N
+| executeCommand| Executes a system command. Because this refactoring doesn’t generate SQL like most, using LiquiBase commands such as migrateSQL may not work as expected. Therefore, if at all possible use refactorings that generate SQL.|N
+| insert| Inserts data into an existing table|N
 |===
 
 ++++

@@ -36,39 +36,39 @@
 <div class="col cardcommands c2-2 c3-2 c4-2 c5-2 c6-2"><div class="blk">
 ++++
 
-[options="header", cols="3"]
+[options="header", cols="1,2,1"]
 |===
 3+| DDL CHANGES
-| CHANGE| DESCRIPTION|ROLLBACK SUPPORT
-| addAutoIncrement   | Converts an existing column to be an auto-increment column|Y
-| addColumn          | Adds a new column to an existing table|Y
-| addDefaultValue    | Adds a default value to the database definition for the specified column. One of defaultValue, defaultValueNumeric, defaultValueBoolean or defaultValueDate must be set|Y
-| addForeignKeyConstraint| Adds a foreign key constraint to an existing column |Y
-| addLookupTable         | Creates a lookup table containing values stored in a column and creates a foreign key to the new table.|Y
-| addNotNullConstraint | Adds a not-null constraint to an existing table. If a defaultNullValue attribute is passed, all null values for the column will be updated to the passed value before the constraint is applied.|Y
-| addPrimaryKey           | Adds creates a primary key out of an existing column or set of columns. |N
-| addUniqueConstraint           | Adds a unique constrant to an existing column or set of columns. |N
-| alterSequence           | Alter properties of an existing sequence |N
-| createIndex           | Creates an index on an existing column or set of columns. |N
-| createProcedure           | Defines the definition for a stored procedure. This command is better to use for creating procedures than the raw sql command because it will not attempt to strip comments or break up lines. |N
-| createSequence| Creates a new database sequence|N
-| createTable| Create Table|N
-| createView| Create a new database view|N
-| dropAllForeignKeyConstraints| Drops all foreign key constraints for a table |N
-| dropColumn| Drop an existing column |N
-| dropDefaultValue| Removes the database default value for a column|N
-| dropForeignKeyConstraint| Drops an existing foreign key|N
-| dropIndex| Drops an existing index|N
-| dropNotNullConstraint| Makes a column nullable|N
-| dropPrimaryKey| Drops an existing primary key|N
-| dropSequence| Drop an existing sequence|N
-| dropTable| Drops an existing table|N
-| dropUniqueConstraint| Drops an existing unique constraint|N
-| dropView| Drops an existing view |N
-| modifyDataType| Modify data type|N
-| renameColumn| Renames an existing column|N
-| renameTable| Renames an existing table|N
-| renameView| Renames an existing view |N
+| *CHANGE*| *DESCRIPTION*|*ROLLBACK*
+| +addAutoIncrement+   | Converts an existing column to be an auto-increment column|Y
+| +addColumn+         | Adds a new column to an existing table|Y
+| +addDefaultValue+    | Adds a default value to the database definition for the specified column. One of defaultValue, defaultValueNumeric, defaultValueBoolean or defaultValueDate must be set|Y
+| +addForeignKeyConstraint+| Adds a foreign key constraint to an existing column |Y
+| +addLookupTable+         | Creates a lookup table containing values stored in a column and creates a foreign key to the new table.|Y
+| +addNotNullConstraint+ | Adds a not-null constraint to an existing table. If a defaultNullValue attribute is passed, all null values for the column will be updated to the passed value before the constraint is applied.|Y
+| +addPrimaryKey+           | Adds creates a primary key out of an existing column or set of columns. |N
+| +addUniqueConstraint+           | Adds a unique constrant to an existing column or set of columns. |N
+| +alterSequence+           | Alter properties of an existing sequence |N
+| +createIndex+           | Creates an index on an existing column or set of columns. |N
+| +createProcedure+           | Defines the definition for a stored procedure. This command is better to use for creating procedures than the raw sql command because it will not attempt to strip comments or break up lines. |N
+| +createSequence+| Creates a new database sequence|N
+| +createTable+| Create Table|N
+| +createView+| Create a new database view|N
+| +dropAllForeignKeyConstraints+| Drops all foreign key constraints for a table |N
+| +dropColumn+| Drop an existing column |N
+| +dropDefaultValue+| Removes the database default value for a column|N
+| +dropForeignKeyConstraint+| Drops an existing foreign key|N
+| +dropIndex+| Drops an existing index|N
+| +dropNotNullConstraint+| Makes a column nullable|N
+| +dropPrimaryKey+| Drops an existing primary key|N
+| +dropSequence+| Drop an existing sequence|N
+| +dropTable+| Drops an existing table|N
+| +dropUniqueConstraint+| Drops an existing unique constraint|N
+| +dropView+| Drops an existing view |N
+| +modifyDataType+| Modify data type|N
+| +renameColumn+| Renames an existing column|N
+| +renameTable+| Renames an existing table|N
+| +renameView+| Renames an existing view |N
 |===
 
 ++++
@@ -77,21 +77,21 @@
 <div class="col cardcommands c2-1 c3-3 c4-3 c5-3 c6-3"><div class="blk">
 ++++
 
-[options="header", cols="3"]
+[options="header", cols="1,2,1"]
 |===
 3+| DML and MISC CHANGES
-| CHANGE         | DESCRIPTION|ROLLBACK SUPPORT
-| customChange   | Although Liquibase tries to provide a wide range of database refactorings, there are times you may want to create your own custom refactoring class.|N
-| delete         | Deletes data from an existing table|N
-| executeCommand | Executes a system command. Because this refactoring doesn't generate SQL like most, using LiquiBase commands such as migrateSQL may not work as expected. Therefore, if at all possible use refactorings that generate SQL.|N
-| insert         | Inserts data into an existing table|N
-| loadData       | Loads data from a CSV file into an existing table. A value of NULL in a cell will be converted to a database NULL rather than the string 'NULL'|N
-| loadUpdateData | Loads or updates data from a CSV file into an existing table. Differs from loadData by issuing a SQL batch that checks for the existence of a record. If found, the record is UPDATEd, else the record is INSERTed. Also, generates DELETE statements for a rollback. |N
-| mergeColumns   | Concatenates the values in two columns, joins them by with string, and stores the resulting value in a new column. |N
-| sql            | The 'sql' tag allows you to specify whatever sql you want. It is useful for complex changes that aren't supported through Liquibase's automated refactoring tags and to work around bugs and limitations of Liquibase. The SQL contained in the sql tag can be multi-line. |N
-| sqlFile        | The 'sqlFile' tag allows you to specify any sql statements and have it stored external in a file. It is useful for complex changes that are not supported through LiquiBase's automated refactoring tags such as stored procedures. |N
-| tagDatabase    | Applies a tag to the database for future rollback |N
-| update         | Updates data in an existing table |N
+| *CHANGE*| *DESCRIPTION*|*ROLLBACK*
+| +customChange+ | Although Liquibase tries to provide a wide range of database refactorings, there are times you may want to create your own custom refactoring class.|N
+| +delete+ | Deletes data from an existing table|N
+| +executeCommand+ | Executes a system command. Because this refactoring doesn't generate SQL like most, using LiquiBase commands such as migrateSQL may not work as expected. Therefore, if at all possible use refactorings that generate SQL.|N
+| +insert+ | Inserts data into an existing table|N
+| +loadData+ | Loads data from a CSV file into an existing table. A value of NULL in a cell will be converted to a database NULL rather than the string 'NULL'|N
+| +loadUpdateData+ | Loads or updates data from a CSV file into an existing table. Differs from loadData by issuing a SQL batch that checks for the existence of a record. If found, the record is UPDATEd, else the record is INSERTed. Also, generates DELETE statements for a rollback. |N
+| +mergeColumns+ | Concatenates the values in two columns, joins them by with string, and stores the resulting value in a new column. |N
+| +sql+ | The 'sql' tag allows you to specify whatever sql you want. It is useful for complex changes that aren't supported through Liquibase's automated refactoring tags and to work around bugs and limitations of Liquibase. The SQL contained in the sql tag can be multi-line. |N
+| +sqlFile+| The 'sqlFile' tag allows you to specify any sql statements and have it stored external in a file. It is useful for complex changes that are not supported through LiquiBase's automated refactoring tags such as stored procedures. |N
+| +tagDatabase+ | Applies a tag to the database for future rollback |N
+| +update+| Updates data in an existing table |N
 |===
 
 ++++
@@ -100,4 +100,3 @@
 
 </div>
 ++++
-

@@ -1,5 +1,5 @@
 ++++
-<div class="horizontal-block" id="Commands">
+<div class="horizontal-block" id="Changes">
 <div class="col cardcommands c2-1 c3-1 c4-1 c5-1 c6-1"><div class="blk">
 ++++
 
@@ -26,7 +26,11 @@
 |
 
 - Avoid multiple changes per changeset to avoid failed autocommit statements that can leave the database in an unexpected state.
-- B
+- Partition the changelog. Instead of creating one huge changelog per application; create smaller Sub-Changelogs and use the include script statement to link these into the Master-Changelog.
+- Maintain separate changelog for Stored Procedures and use +runOnChange="true"+. This flag forces LiquiBase to check if the Changeset was changed instead of just checking if it was run once before so it can be skipped.
+- Try to write changesets in a way that they can be rolled back. e.g. use liquibase change clause over +<sql>+.
+- Include a +<rollback>+ clause whenever a change  doesn't support out of box rollback.
+- Always include a +<preconditions>+ clause in critical changes e.g. before dropping a table it could be wise to check if the table has any data.
 
 |===
 

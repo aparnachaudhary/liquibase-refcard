@@ -1,31 +1,88 @@
 ++++
 <div class="horizontal-block" id="MAVEN">
-<div class="col c2-1 c3-1 c4-1 c5-1 c6-1"><div class="blk">
+<div class="col cardmaven c2-1 c3-1 c4-1 c5-1 c6-1"><div class="blk">
+++++
+
+[options="header" cols="a"]
+|===
+| Liquibase Core
+|
+[source,xml]
+----
+<!-- Liquibase -->
+<dependency>
+	<groupId>org.liquibase</groupId>
+	<artifactId>liquibase-core</artifactId>
+	<version>${liquibase.version}</version>
+</dependency>
+----
+|===
+
+++++
+</div></div>
+
+<div class="col cardmaven c2-2 c3-2 c4-2 c5-2 c6-2"><div class="blk">
+++++
+
+[options="header" cols="a"]
+|===
+| Liquibase Maven Plugin configuration
+|
+
+[source,xml]
+----
+<plugin>
+ <groupId>org.liquibase</groupId>
+ <artifactId>liquibase-maven-plugin</artifactId>
+ <version>${liquibase.version}</version>
+ <executions>
+  <execution>
+   <goals>
+    <goal>update</goal>
+   </goals>
+  </execution>
+ </executions>
+ <configuration>
+  <logging>debug</logging>
+  <promptOnNonLocalDatabase>false
+  </promptOnNonLocalDatabase>
+  <driver>${db.driver}</driver>
+  <url>${db.url}</url>
+  <username>${db.username}</username>
+  <password>${db.password}</password>
+  <changeLogFile>${changelog}</changeLogFile>
+ </configuration>
+</plugin>
+----
+|===
+
+++++
+</div></div>
+
+<div class="col cardmaven c2-1 c3-3 c4-3 c5-3 c6-3"><div class="blk">
+++++
+
+[options="header", cols="1m,2"]
+|===
+2+| Maven Goals
+| update        | 
+| tag           | 
+| dropAll       | 
+| rollback      | 
+
+|===
+
+
+++++
+</div></div>
+
+<div class="col cardmaven c2-1 c3-3 c4-3 c5-3 c6-3"><div class="blk">
 ++++
 
 
 ++++
 </div></div>
 
-<div class="col c2-2 c3-2 c4-2 c5-2 c6-2"><div class="blk">
-++++
-
-
-++++
-</div></div>
-
-<div class="col c2-1 c3-3 c4-3 c5-3 c6-3"><div class="blk">
-++++
-
-
-++++
-</div></div>
-
-<div class="col c2-1 c3-2 c4-4 c5-4 c6-4"><div class="blk">
-++++
-
-++++
-</div></div>
 </div>
 ++++
 

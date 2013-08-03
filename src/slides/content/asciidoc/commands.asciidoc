@@ -17,28 +17,6 @@
 ++++
 </div></div>
 
-<div class="col cardcommands c2-1 c3-1 c4-1 c5-1 c6-1"><div class="blk">
-++++
-
-[options="header", cols="a"]
-|===
-1+| Best Practices
-|
-
-- Avoid multiple changes per changeset to avoid failed autocommit statements that can leave the database in an unexpected state.
-- Partition the changelog. Instead of creating one huge changelog per application; create smaller sub-changelogs and use the include script statement to link these into the Master changelog.
-- Maintain separate changelog for Stored Procedures and use +runOnChange="true"+. This flag forces LiquiBase to check if the Changeset was changed instead of just checking if it was run once before so it can be skipped.
-- Try to write changesets in a way that they can be rolled back. e.g. use liquibase relevant change clause over +<sql>+.
-- Include a +<rollback>+ clause whenever a change  doesn't support out of box rollback.
-- Always include a +<preconditions>+ clause in critical changes e.g. before dropping a table it could be wise to check if the table has any data.
-- Use +comments+ in the change sets. They say "A stitch in time saves nine"!
-- Do not ever +edit+ a changeset (exceptions: +<rollback>+ script, error handling, +<sql>+ tags with +runOnChange="true"+)
-- Leverage Liquibase to manage your Reference Data.
-
-|===
-
-++++
-</div></div>
 
 <div class="col cardcommands c2-2 c3-2 c4-2 c5-2 c6-2"><div class="blk">
 ++++

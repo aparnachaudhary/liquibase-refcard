@@ -23,6 +23,10 @@ mvn asciidoctor:zip
 ----
 
 
+=== Build: ===
+
+[![Build Status](https://travis-ci.org/aparnachaudhary/liquibase-refcard.png)](https://travis-ci.org/aparnachaudhary/liquibase-refcard)
+
 === How it works: ===
 
 === Licensing and Copyright: ===

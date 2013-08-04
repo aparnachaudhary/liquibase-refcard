@@ -2,6 +2,10 @@
 
 This project creates a reference card for Liquibase.
 
+=== Build Status: ===
+
+image::https://travis-ci.org/aparnachaudhary/liquibase-refcard.png?branch=master["Build Status", link="https://travis-ci.org/aparnachaudhary/liquibase-refcard"]
+
 === Building: ===
 
 .Requirements:
@@ -21,11 +25,6 @@ You can generate a zip archive of the site with:
 ----
 mvn asciidoctor:zip
 ----
-
-
-=== Build: ===
-
-[![Build Status](https://travis-ci.org/aparnachaudhary/liquibase-refcard.png)](https://travis-ci.org/aparnachaudhary/liquibase-refcard)
 
 === How it works: ===
 

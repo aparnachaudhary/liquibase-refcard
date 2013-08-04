@@ -427,11 +427,12 @@ footer div.mid {
 code,em.code,em.tx,span.monospaced {
   font-family: "Ubuntu Mono", "Courier New", Courier, monospace, serif;
   font-style: normal;
+  font-weight: bold;
   font-size: 14px;
 }
 
 code,span.monospaced {
-  color: #004759;
+  color: #005A72;
 }
 
 p.tableblock {

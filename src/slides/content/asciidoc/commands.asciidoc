@@ -25,19 +25,19 @@
 |===
 3+| DDL - CREATE
 | *CHANGE*| *DESCRIPTION*|*ROLLBACK*
-| +addAutoIncrement+   | Converts an existing column to be an auto-increment column|N
-| +addColumn+         | Adds a new column to an existing table|Y
-| +addDefaultValue+    | Adds a default value to the database definition for the specified column. One of defaultValue, defaultValueNumeric, defaultValueBoolean or defaultValueDate must be set|Y
-| +addForeignKeyConstraint+| Adds a foreign key constraint to an existing column |Y
-| +addLookupTable+         | Creates a lookup table containing values stored in a column and creates a foreign key to the new table.|Y
-| +addNotNullConstraint+ | Adds a not-null constraint to an existing table. If a defaultNullValue attribute is passed, all null values for the column will be updated to the passed value before the constraint is applied.|Y
-| +addPrimaryKey+           | Adds creates a primary key out of an existing column or set of columns. |Y
-| +addUniqueConstraint+           | Adds a unique constrant to an existing column or set of columns. |Y
-| +createIndex+           | Creates an index on an existing column or set of columns. |Y
-| +createProcedure+           | Defines the definition for a stored procedure. This command is better to use for creating procedures than the raw sql command because it will not attempt to strip comments or break up lines. |Y
-| +createSequence+| Creates a new database sequence|Y
-| +createTable+| Create Table|Y
-| +createView+| Create a new database view|Y
+| +link:http://www.liquibase.org/documentation/changes/add_auto_increment.html[addAutoIncrement]+   | Converts an existing column to be an auto-increment column|+N+
+| +link:http://www.liquibase.org/documentation/changes/add_column.html[addColumn]+         | Adds a new column to an existing table|+Y+
+| +link:http://www.liquibase.org/documentation/changes/add_default_value.html[addDefaultValue]+    | Adds a default value to the database definition for the specified column. One of defaultValue, defaultValueNumeric, defaultValueBoolean or defaultValueDate must be set|+Y+
+| +link:http://www.liquibase.org/documentation/changes/add_foreign_key_constraint.html[addForeignKeyConstraint]+| Adds a foreign key constraint to an existing column |+Y+
+| +link:http://www.liquibase.org/documentation/changes/add_lookup_table.html[addLookupTable]+         | Creates a lookup table containing values stored in a column and creates a foreign key to the new table.|+Y+
+| +link:http://www.liquibase.org/documentation/changes/add_not_null_constraint.html[addNotNullConstraint]+ | Adds a not-null constraint to an existing table. If a defaultNullValue attribute is passed, all null values for the column will be updated to the passed value before the constraint is applied.|+Y+
+| +link:http://www.liquibase.org/documentation/changes/add_primary_key.html[addPrimaryKey]+           | Adds creates a primary key out of an existing column or set of columns. |+Y+
+| +link:http://www.liquibase.org/documentation/changes/add_unique_constraint.html[addUniqueConstraint]+           | Adds a unique constrant to an existing column or set of columns. |+Y+
+| +link:http://www.liquibase.org/documentation/changes/create_index.html[createIndex]+           | Creates an index on an existing column or set of columns. |+Y+
+| +link:http://www.liquibase.org/documentation/changes/create_procedure.html[createProcedure]+           | Defines the definition for a stored procedure. This command is better to use for creating procedures than the raw sql command because it will not attempt to strip comments or break up lines. |+N+
+| +link:http://www.liquibase.org/documentation/changes/create_sequence.html[createSequence]+| Creates a new database sequence|+Y+
+| +link:http://www.liquibase.org/documentation/changes/create_table.html[createTable]+| Create Table|+Y+
+| +link:http://www.liquibase.org/documentation/changes/create_view.html[createView]+| Create a new database view|+Y+
 |===
 
 
@@ -51,22 +51,22 @@
 |===
 3+| DDL - DROP/UPDATE
 | *CHANGE*| *DESCRIPTION*|*ROLLBACK*
-| +dropAllForeignKeyConstraints+| Drops all foreign key constraints for a table |-
-| +dropColumn+| Drop an existing column |-
-| +dropDefaultValue+| Removes the database default value for a column|-
-| +dropForeignKeyConstraint+| Drops an existing foreign key|-
-| +dropIndex+| Drops an existing index|-
-| +dropNotNullConstraint+| Makes a column nullable|-
-| +dropPrimaryKey+| Drops an existing primary key|-
-| +dropSequence+| Drop an existing sequence|-
-| +dropTable+| Drops an existing table|-
-| +dropUniqueConstraint+| Drops an existing unique constraint|-
-| +dropView+| Drops an existing view |-
-| +alterSequence+           | Alter properties of an existing sequence |-
-| +modifyDataType+| Modify data type|-
-| +renameColumn+| Renames an existing column|-
-| +renameTable+| Renames an existing table|-
-| +renameView+| Renames an existing view |-
+| +link:http://www.liquibase.org/documentation/changes/drop_all_foreign_key_constraints.html[dropAllForeignKeyConstraints]+| Drops all foreign key constraints for a table |+N+
+| +link:http://www.liquibase.org/documentation/changes/drop_column.html[dropColumn]+| Drop an existing column |+N+
+| +link:http://www.liquibase.org/documentation/changes/drop_default_value.html[dropDefaultValue]+| Removes the database default value for a column|+N+
+| +link:http://www.liquibase.org/documentation/changes/drop_foreign_key_constraint.html[dropForeignKeyConstraint]+| Drops an existing foreign key|+N+
+| +link:http://www.liquibase.org/documentation/changes/drop_index.html[dropIndex]+| Drops an existing index|+N+
+| +link:http://www.liquibase.org/documentation/changes/drop_not_null_constraint.html[dropNotNullConstraint]+| Makes a column nullable|+Y+
+| +link:http://www.liquibase.org/documentation/changes/drop_primary_key.html[dropPrimaryKey]+| Drops an existing primary key|+N+
+| +link:http://www.liquibase.org/documentation/changes/drop_sequence.html[dropSequence]+| Drop an existing sequence|+N+
+| +link:http://www.liquibase.org/documentation/changes/drop_table.html[dropTable]+| Drops an existing table|+N+
+| +link:http://www.liquibase.org/documentation/changes/drop_unique_constraint.html[dropUniqueConstraint]+| Drops an existing unique constraint|+N+
+| +link:http://www.liquibase.org/documentation/changes/drop_view.html[dropView]+| Drops an existing view |+N+
+| +link:http://www.liquibase.org/documentation/changes/alter_sequence.html[alterSequence]+| Alter properties of an existing sequence |+N+
+| +link:http://www.liquibase.org/documentation/changes/modify_data_type.html[modifyDataType]+| Modify data type|+N+
+| +link:http://www.liquibase.org/documentation/changes/rename_column.html[renameColumn]+| Renames an existing column|+Y+
+| +link:http://www.liquibase.org/documentation/changes/rename_table.html[renameTable]+| Renames an existing table|+Y+
+| +link:http://www.liquibase.org/documentation/changes/rename_view.html[renameView]+| Renames an existing view |+Y+
 |===
 
 
@@ -80,10 +80,10 @@
 |===
 3+| DML CHANGES
 | *CHANGE*| *DESCRIPTION*|*ROLLBACK*
-| +delete+ | Deletes data from an existing table|-
-| +insert+ | Inserts data into an existing table|-
-| +mergeColumns+ | Concatenates the values in two columns, joins them by with string, and stores the resulting value in a new column. |-
-| +update+| Updates data in an existing table |-
+| +link:http://www.liquibase.org/documentation/changes/delete.html[delete]+ | Deletes data from an existing table|+N+
+| +link:http://www.liquibase.org/documentation/changes/insert.html[insert]+ | Inserts data into an existing table|+N+
+| +link:http://www.liquibase.org/documentation/changes/merge_columns.html[mergeColumns]+ | Concatenates the values in two columns, joins them by with string, and stores the resulting value in a new column. |+N+
+| +link:http://www.liquibase.org/documentation/changes/update.html[update]+| Updates data in an existing table |+N+
 |===
 
 ++++
@@ -96,13 +96,13 @@
 |===
 3+| OTHER CHANGES
 | *CHANGE*| *DESCRIPTION*|*ROLLBACK*
-| +customChange+ | Although Liquibase tries to provide a wide range of database refactorings, there are times you may want to create your own custom refactoring class.|-
-| +executeCommand+ | Executes a system command. Because this refactoring doesn't generate SQL like most, using LiquiBase commands such as migrateSQL may not work as expected. Therefore, if at all possible use refactorings that generate SQL.|-
-| +loadData+ | Loads data from a CSV file into an existing table. A value of NULL in a cell will be converted to a database NULL rather than the string 'NULL'|-
-| +loadUpdateData+ | Loads or updates data from a CSV file into an existing table. Differs from loadData by issuing a SQL batch that checks for the existence of a record. If found, the record is UPDATEd, else the record is INSERTed. Also, generates DELETE statements for a rollback. |-
-| +sql+ | The 'sql' tag allows you to specify whatever sql you want. It is useful for complex changes that aren't supported through Liquibase's automated refactoring tags and to work around bugs and limitations of Liquibase. The SQL contained in the sql tag can be multi-line. |-
-| +sqlFile+| The 'sqlFile' tag allows you to specify any sql statements and have it stored external in a file. It is useful for complex changes that are not supported through LiquiBase's automated refactoring tags such as stored procedures. |-
-| +tagDatabase+ | Applies a tag to the database for future rollback |-
+| +link:http://www.liquibase.org/documentation/changes/custom_change.html[customChange]+ | Although Liquibase tries to provide a wide range of database refactorings, there are times you may want to create your own custom refactoring class.|+N+
+| +link:http://www.liquibase.org/documentation/changes/execute_command.html[executeCommand]+ | Executes a system command. Because this refactoring doesn't generate SQL like most, using LiquiBase commands such as migrateSQL may not work as expected. Therefore, if at all possible use refactorings that generate SQL.|+N+
+| +link:http://www.liquibase.org/documentation/changes/load_data.html[loadData]+ | Loads data from a CSV file into an existing table. A value of NULL in a cell will be converted to a database NULL rather than the string 'NULL'|+N+
+| +link:http://www.liquibase.org/documentation/changes/load_update_data.html[loadUpdateData]+ | Loads or updates data from a CSV file into an existing table. Differs from loadData by issuing a SQL batch that checks for the existence of a record. If found, the record is UPDATEd, else the record is INSERTed. Also, generates DELETE statements for a rollback. |+N+
+| +link:http://www.liquibase.org/documentation/changes/sql.html[sql]+ | The 'sql' tag allows you to specify whatever sql you want. It is useful for complex changes that aren't supported through Liquibase's automated refactoring tags and to work around bugs and limitations of Liquibase. The SQL contained in the sql tag can be multi-line. |+N+
+| +link:http://www.liquibase.org/documentation/changes/sql_file.html[sqlFile]+| The 'sqlFile' tag allows you to specify any sql statements and have it stored external in a file. It is useful for complex changes that are not supported through LiquiBase's automated refactoring tags such as stored procedures. |+N+
+| +link:http://www.liquibase.org/documentation/changes/tag_database.html[tagDatabase]+ | Applies a tag to the database for future rollback |+Y+
 |===
 
 ++++

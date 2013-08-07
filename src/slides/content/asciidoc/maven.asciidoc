@@ -65,10 +65,13 @@
 [options="header", cols="1m,2"]
 |===
 2+| Maven Goals
-| update        | 
-| tag           | 
-| dropAll       | 
-| rollback      | 
+| link:http://www.liquibase.org/documentation/maven/maven_dropall.html[dropAll] | Drops all database objects owned by the user. Note that functions, procedures and packages are not dropped.
+| link:http://www.liquibase.org/documentation/maven/maven_update.html[update]        | Applies the DatabaseChangeLogs to the database. Useful as part of the build process.
+| link:http://www.liquibase.org/documentation/maven/maven_tag.html[tag]           | Writes a Liquibase tag to the database.
+| link:http://www.liquibase.org/documentation/maven/maven_rollback.html[rollback]      | Invokes Liquibase rollbacks on a database.
+| link:http://www.liquibase.org/documentation/maven/maven_status.html[status]      | Prints which changesets need to be applied to the database.
+| link:http://www.liquibase.org/documentation/maven/maven_updatetestingrollback.html[updateTestingRollback]      | Applies the DatabaseChangeLogs to the database, testing rollback. This is done by updating the database, rolling it back then updating it again.
+| link:http://www.liquibase.org/documentation/maven/maven_updatesql.html[updateSQL]      | Generates the SQL that is required to update the database to the current version as specified in the DatabaseChangeLogs.
 
 |===
 

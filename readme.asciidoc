@@ -28,6 +28,18 @@ mvn asciidoctor:zip
 
 === How it works: ===
 
+The main file for the content is 'src/slides/content/refcard.asciidoc'. It loads include files from the 'src/slides/content/asciidoc' folder. The refcard is available in HTML5 format and you can also print a 2 column layout. 
+
+.The refcard has three sections:
+* +Overview:+ Summarizes Liquibase philosophy and features
+* +Configuration:+ Explains how to use maven plugin for different operations
+* +Commands:+ Provides information on all the change elements (e.g. insert, createTable, etc) supported by Liquibase and their rollback capability
+
+=== TODO: ===
+
+The current print layout is a bit broken. But I’ve limitations when it comes to CSS and JS. Please feel free to fork the repository and make it better.
+
+
 === Licensing and Copyright: ===
 
 The project is licensed under the http://www.apache.org/licenses/LICENSE-2.0[Apache License, Version 2.0]

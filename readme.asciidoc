@@ -39,7 +39,7 @@ image:LiquibaseConcepts.jpg[Liquibase Concepts]
 
 === Credits: ===
 
-The content for this refcard is collated from following sites:
+.The content for this refcard is collated from following sites:
 * http://www.liquibase.org/
 * http://en.wikipedia.org/wiki/Liquibase
 

@@ -35,6 +35,14 @@ The main file for the content is 'src/slides/content/refcard.asciidoc'. It loads
 * +Configuration:+ Explains how to use maven plugin for different operations
 * +Commands:+ Provides information on all the change elements (e.g. insert, createTable, etc) supported by Liquibase and their rollback capability
 
+image:LiquibaseConcepts.jpg[Liquibase Concepts]
+
+=== Credits: ===
+
+The content for this refcard is collated from following sites:
+* http://www.liquibase.org/
+* http://en.wikipedia.org/wiki/Liquibase
+
 === TODO: ===
 
 The current print layout is a bit broken. But I’ve limitations when it comes to CSS and JS. Please feel free to fork the repository and make it better.

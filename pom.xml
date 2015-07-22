@@ -4,7 +4,7 @@
 
   <groupId>net.arunoday</groupId>
   <artifactId>liquibase-refcard</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.1</version>
   <name>Liquibase Reference Card</name>
   <packaging>pom</packaging>
 
@@ -12,6 +12,7 @@
         <connection>scm:git:git://github.com/aparnachaudhary/liquibase-refcard.git</connection>
         <developerConnection>scm:git:git@github.com:aparnachaudhary/liquibase-refcard.git</developerConnection>
         <url>https://github.com/aparnachaudhary/liquibase-refcard</url>
+    <tag>liquibase-refcard-1.0.1</tag>
   </scm>
 
     <distributionManagement>

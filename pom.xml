@@ -10,13 +10,32 @@
   <name>Liquibase Reference Card</name>
   <packaging>pom</packaging>
 
+    <scm>
+        <connection>scm:git:git://github.com/aparnachaudhary/liquibase-refcard.git</connection>
+        <developerConnection>scm:git:git@github.com:aparnachaudhary/liquibase-refcard.git</developerConnection>
+        <url>https://github.com/aparnachaudhary/liquibase-refcard</url>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+          <id>nexus-releases</id>
+          <name>Nexus Release Repository</name>
+          <url>http://localhost:8081/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+          <id>nexus-snapshots</id>
+          <name>Nexus Snapshot Repository</name>
+          <url>http://localhost:8081/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
   <build>
     <plugins>
       <plugin>
         <groupId>org.asciidoctor</groupId>
         <artifactId>asciidoctor-maven-plugin</artifactId>
         <version>0.1.3.1</version>
-		<executions>
+		    <executions>
           <execution>
             <id>output-html</id>
             <phase>pre-site</phase>

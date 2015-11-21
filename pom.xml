@@ -91,10 +91,9 @@
                         <!-- select the Maven phase in which the plugin will be executed -->
                         <phase>site-deploy</phase>
                         <configuration>
-                            <!-- Plugin configuration ges here -->
                             <server>github</server>
                             <!-- The commit message -->
-                            <message>Building site for my project</message>
+                            <message>Deploying refcard</message>
                             <!-- The location where the site is uploaded -->
                             <outputDirectory>${slides.output}</outputDirectory>
                             <!-- Use merge or override the content -->

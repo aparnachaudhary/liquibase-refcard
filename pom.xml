@@ -27,11 +27,6 @@
             <name>Nexus Release Repository</name>
             <url>http://localhost:8081/content/repositories/releases</url>
         </repository>
-        <site>
-            <id>github-pages-site</id>
-            <name>Deployment through GitHub's site deployment plugin</name>
-            <url>file:${project.basedir}/refcard</url>
-        </site>
     </distributionManagement>
 
     <build>

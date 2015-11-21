@@ -85,7 +85,7 @@
                 <!-- Deploy the web site -->
                 <groupId>com.github.github</groupId>
                 <artifactId>site-maven-plugin</artifactId>
-                <version>0.9</version>
+                <version>0.12</version>
                 <executions>
                     <execution>
                         <goals>
@@ -100,7 +100,7 @@
                             <!-- The location where the site is uploaded -->
                             <outputDirectory>${slides.output}</outputDirectory>
                             <!-- Use merge or override the content -->
-                            <merge>true</merge>
+                            <merge>false</merge>
                         </configuration>
                     </execution>
                 </executions>

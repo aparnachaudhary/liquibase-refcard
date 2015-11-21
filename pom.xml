@@ -16,6 +16,14 @@
         <tag>HEAD</tag>
     </scm>
 
+    <developers>
+        <developer>
+            <id>aparnac</id>
+            <name>Aparna Chaudhary</name>
+            <email>aparna.chaudhary@gmail.com</email>
+        </developer>
+    </developers>
+
     <distributionManagement>
         <snapshotRepository>
             <id>nexus-snapshots</id>
@@ -84,7 +92,7 @@
                             <goal>site</goal>
                         </goals>
                         <!-- select the Maven phase in which the plugin will be executed -->
-                        <phase>site-deploy</phase>
+                        <phase>site</phase>
                         <configuration>
                             <server>github</server>
                             <!-- The commit message -->

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta charset="utf-8">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta content="Asciidoctor 0.1.3" name="generator">
+<meta content="RefCard" name="description">
+<meta content="refcard" name="keywords">
+<title></title>
+<link href="css/style.css" rel="stylesheet">
+<link href="css/github.min.css" rel="stylesheet">
+<link href="css/refcard.css" media="print, screen" rel="stylesheet" type="text/css">
+<script src="js/jquery.min.js"></script>
+<script src="js/modernizr.custom.2.6.2.js"></script>
+<script src="js/highlight.min.js"></script>
+<script src="js/refcard.js"></script>
+</head>
+<body class="article">
+<header>
+<div class="mid">
+<img id="logo" src="images/liquibase.png">
+<h1>
+Liquibase RefCard
+</h1>
+</div>
+</header>
+<div class="main">
+<div class="mid">
+<div class="page" id="page">
+<div class="horizontal-block" id="Overview">
+<div class="col cardoverview c2-1 c3-1 c4-1 c5-1 c6-1"><div class="blk"><table class="tableblock frame-all grid-all" style="width: 100%">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Liquibase Philosophy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="paragraph">
+<p>Liquibase, is an Apache Licensed open source library written in Java for tracking, managing and applying database changes.<br>
+<br>
+All changes to the database are stored in XML files and identified by a combination of an "id" and "author" tag as well as the
+name of the file itself. A list of all applied changes is stored in each database which is consulted on all database updates
+to determine what new changes need to be applied. As a result, there is no database version number but this approach allows
+it to work in environments with multiple developers and code branches.</p>
+</div>
+
+
+</div></td>
+</tr>
+</tbody>
+</table>
+<table class="tableblock frame-all grid-all" style="width: 100%">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Liquibase Links</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="ulist">
+
+<ul>
+<li>
+<p>Liquibase Website: <a href="www.liquibase.org/">www.liquibase.org/</a></p>
+</li>
+<li>
+<p>Liquibase Source Code: <a href="https://github.com/liquibase/liquibase">https://github.com/liquibase/liquibase</a></p>
+</li>
+<li>
+<p>Liquibase Manual: <a href="http://www.liquibase.org/documentation">http://www.liquibase.org/documentation/</a></p>
+</li>
+</ul>
+</div>
+
+
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></div>
+
+<div class="col cardoverview c2-2 c3-3 c4-3 c5-3 c6-3"><div class="blk"><table class="tableblock frame-all grid-all" style="width: 100%">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2">CONCEPTS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Changelog file</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Developers store database changes in text-based files on their local development machines and apply them to their local databases.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Change Set</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Change Sets are uniquely identified by the "author" and "id" attribute along with with the location of the changelog file and are the units Liquibase tracks execution of.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Changes</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Each changeset generally contains a change which describes the change/refactoring to apply to the database. Liquibase supports both descriptive changes that generate SQL for supported databases and raw SQL.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Preconditions</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Preconditions can be applied to either the changelog as a whole or individual change sets. If a precondition fails, Liquibase will stop execution.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Contexts</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Contexts can be applied to changesets to control which are ran in different environments. For example, some changesets can be tagged as "production" and others as "test". If no context is specified, the changeset will run regardless of the execution context</p></td>
+</tr>
+</tbody>
+</table>
+</div></div>
+
+<div class="col cardoverview c2-1 c3-3 c4-4 c5-4 c6-4"><div class="blk"><table class="tableblock frame-all grid-all" style="width: 100%">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">FEATURES</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="ulist">
+
+<ul>
+<li>
+<p>Over 30 built-in database refactorings</p>
+</li>
+<li>
+<p>Extensibility to create custom changes</p>
+</li>
+<li>
+<p>Update database to current version</p>
+</li>
+<li>
+<p>Rollback last X changes to database</p>
+</li>
+<li>
+<p>Rollback database changes to particular date/time</p>
+</li>
+<li>
+<p>Rollback database to "tag"</p>
+</li>
+<li>
+<p>SQL for Database Updates and Rollbacks can be saved for manual review</p>
+</li>
+<li>
+<p>Stand-alone IDE and Eclipse plug-in</p>
+</li>
+<li>
+<p>"Contexts" for including/excluding change sets to execute</p>
+</li>
+<li>
+<p>Database diff report</p>
+</li>
+<li>
+<p>Database diff changelog generation</p>
+</li>
+<li>
+<p>Ability to create changelog to generate an existing database</p>
+</li>
+<li>
+<p>Database change documentation generation</p>
+</li>
+<li>
+<p>DBMS Check, user check, and SQL check preconditions</p>
+</li>
+<li>
+<p>Ability to split change log into multiple files for easier management</p>
+</li>
+<li>
+<p>Executable via command line, Ant, Maven, Servlet container, or Spring</p>
+</li>
+<li>
+<p>Support for 10 database systems</p>
+</li>
+</ul>
+</div>
+
+
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></div>
+
+<div class="col cardoverview c2-2 c3-2 c4-4 c5-4 c6-4"><div class="blk"><table class="tableblock frame-all grid-all" style="width: 100%">
+<colgroup>
+<col style="width: 100%">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Best Practices</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div><div class="ulist">
+
+<ul>
+<li>
+<p>Avoid multiple changes per changeset to avoid failed autocommit statements that can leave the database in an unexpected state.</p>
+</li>
+<li>
+<p>Partition the changelog. Instead of creating one huge changelog per application; create smaller sub-changelogs and use the include script statement to link these into the Master changelog.</p>
+</li>
+<li>
+<p>Maintain separate changelog for Stored Procedures and use <code>runOnChange="true"</code>. This flag forces LiquiBase to check if the Changeset was changed instead of just checking if it was run once before so it can be skipped.</p>
+</li>
+<li>
+<p>Try to write changesets in a way that they can be rolled back. e.g. use liquibase relevant change clause over <code>&lt;sql&gt;</code>.</p>
+</li>
+<li>
+<p>Include a <code>&lt;rollback&gt;</code> clause whenever a change  doesn&#8217;t support out of box rollback.</p>
+</li>
+<li>
+<p>Always include a <code>&lt;preconditions&gt;</code> clause in critical changes e.g. before dropping a table it could be wise to check if the table has any data.</p>
+</li>
+<li>
+<p>Use <code>comments</code> in the change sets. They say "A stitch in time saves nine"!</p>
+</li>
+<li>
+<p>Do not ever <code>edit</code> a changeset (exceptions: <code>&lt;rollback&gt;</code> script, error handling, <code>&lt;sql&gt;</code> tags with <code>runOnChange="true"</code>)</p>
+</li>
+<li>
+<p>Leverage Liquibase to manage your Reference Data.</p>
+</li>
+</ul>
+</div>
+
+
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></div>
+
+</div>
+</div>
+<div id="clearing-div" style="clear:both;"></div>
+</div>
+</div>
+<footer>
+<div class="mid">
+<a href="https://github.com/aparnachaudhary/liquibase-refcard"><img id="github" src="images/github.png"></a>
+Liquibase RefCard - revision 1.0.5-SNAPSHOT - 2015-11-21T10:04:13Z - Aparna Chaudhary
+</div>
+</footer>
+</body>
+</html>

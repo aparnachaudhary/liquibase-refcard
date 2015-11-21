@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta charset="utf-8">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta content="Asciidoctor 0.1.3" name="generator">
+<meta content="RefCard" name="description">
+<meta content="refcard" name="keywords">
+<title></title>
+<link href="css/style.css" rel="stylesheet">
+<link href="css/github.min.css" rel="stylesheet">
+<link href="css/refcard.css" media="print, screen" rel="stylesheet" type="text/css">
+<script src="js/jquery.min.js"></script>
+<script src="js/modernizr.custom.2.6.2.js"></script>
+<script src="js/highlight.min.js"></script>
+<script src="js/refcard.js"></script>
+</head>
+<body class="article">
+<header>
+<div class="mid">
+<img id="logo" src="images/liquibase.png">
+<h1>
+Liquibase RefCard
+</h1>
+</div>
+</header>
+<div class="main">
+<div class="mid">
+<div class="page" id="page">
+<div class="horizontal-block" id="Changes">
+<div class="col cardcommands c2-1 c3-1 c4-1 c5-1 c6-1"><div class="blk"><table class="tableblock frame-all grid-all" style="width: 100%">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 66%">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="2">Liquibase Commands</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Update</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Liquibase allows you to apply database changes you and other developers have added to the change log file.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Rollback</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Liquibase allows you to undo changes you have made to your database, either automatically or via custom rollback SQL.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Diff</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">While the best way to track database changes is by adding change sets during development, there are times when being able to perform database diffs is valuable, particularly near the end of a project as a double-check that all required changes are included in the change log.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>SQL Output</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Depending on your development and release processes, you may not want Liquibase to directly update your database.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>DBDoc</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Using change information stored in the change logs and an existing database, Liquibase can generate database change documentation.</p></td>
+</tr>
+</tbody>
+</table>
+</div></div>
+
+
+<div class="col cardcommands c2-2 c3-2 c4-2 c5-2 c6-2"><div class="blk"><table class="tableblock frame-all grid-all" style="width: 100%">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="3">DDL - CREATE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CHANGE</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>DESCRIPTION</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ROLLBACK</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/add_auto_increment.html">addAutoIncrement</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Converts an existing column to be an auto-increment column</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>N</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/add_column.html">addColumn</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adds a new column to an existing table</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Y</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/add_default_value.html">addDefaultValue</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adds a default value to the database definition for the specified column. One of defaultValue, defaultValueNumeric, defaultValueBoolean or defaultValueDate must be set</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Y</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/add_foreign_key_constraint.html">addForeignKeyConstraint</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adds a foreign key constraint to an existing column</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Y</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/add_lookup_table.html">addLookupTable</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Creates a lookup table containing values stored in a column and creates a foreign key to the new table.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Y</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/add_not_null_constraint.html">addNotNullConstraint</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adds a not-null constraint to an existing table. If a defaultNullValue attribute is passed, all null values for the column will be updated to the passed value before the constraint is applied.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Y</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/add_primary_key.html">addPrimaryKey</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adds creates a primary key out of an existing column or set of columns.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Y</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/add_unique_constraint.html">addUniqueConstraint</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Adds a unique constrant to an existing column or set of columns.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Y</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/create_index.html">createIndex</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Creates an index on an existing column or set of columns.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Y</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/create_procedure.html">createProcedure</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines the definition for a stored procedure. This command is better to use for creating procedures than the raw sql command because it will not attempt to strip comments or break up lines.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>N</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/create_sequence.html">createSequence</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Creates a new database sequence</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Y</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/create_table.html">createTable</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create Table</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Y</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/create_view.html">createView</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create a new database view</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Y</code></p></td>
+</tr>
+</tbody>
+</table>
+</div></div>
+
+<div class="col cardcommands c2-2 c3-2 c4-2 c5-2 c6-2"><div class="blk"><table class="tableblock frame-all grid-all" style="width: 100%">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="3">DDL - DROP/UPDATE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CHANGE</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>DESCRIPTION</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ROLLBACK</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/drop_all_foreign_key_constraints.html">dropAllForeignKeyConstraints</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Drops all foreign key constraints for a table</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>N</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/drop_column.html">dropColumn</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Drop an existing column</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>N</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/drop_default_value.html">dropDefaultValue</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Removes the database default value for a column</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>N</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/drop_foreign_key_constraint.html">dropForeignKeyConstraint</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Drops an existing foreign key</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>N</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/drop_index.html">dropIndex</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Drops an existing index</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>N</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/drop_not_null_constraint.html">dropNotNullConstraint</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Makes a column nullable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Y</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/drop_primary_key.html">dropPrimaryKey</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Drops an existing primary key</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>N</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/drop_sequence.html">dropSequence</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Drop an existing sequence</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>N</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/drop_table.html">dropTable</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Drops an existing table</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>N</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/drop_unique_constraint.html">dropUniqueConstraint</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Drops an existing unique constraint</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>N</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/drop_view.html">dropView</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Drops an existing view</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>N</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/alter_sequence.html">alterSequence</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Alter properties of an existing sequence</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>N</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/modify_data_type.html">modifyDataType</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Modify data type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>N</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/rename_column.html">renameColumn</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Renames an existing column</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Y</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/rename_table.html">renameTable</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Renames an existing table</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Y</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/rename_view.html">renameView</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Renames an existing view</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Y</code></p></td>
+</tr>
+</tbody>
+</table>
+</div></div>
+
+<div class="col cardcommands c2-1 c3-3 c4-3 c5-3 c6-3"><div class="blk"><table class="tableblock frame-all grid-all" style="width: 100%">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="3">DML CHANGES</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CHANGE</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>DESCRIPTION</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ROLLBACK</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/delete.html">delete</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deletes data from an existing table</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>N</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/insert.html">insert</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Inserts data into an existing table</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>N</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/merge_columns.html">mergeColumns</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Concatenates the values in two columns, joins them by with string, and stores the resulting value in a new column.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>N</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/update.html">update</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Updates data in an existing table</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>N</code></p></td>
+</tr>
+</tbody>
+</table>
+</div></div>
+
+<div class="col cardcommands c2-1 c3-3 c4-3 c5-3 c6-3"><div class="blk"><table class="tableblock frame-all grid-all" style="width: 100%">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" colspan="3">OTHER CHANGES</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CHANGE</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>DESCRIPTION</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ROLLBACK</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/custom_change.html">customChange</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Although Liquibase tries to provide a wide range of database refactorings, there are times you may want to create your own custom refactoring class.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>N</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/execute_command.html">executeCommand</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Executes a system command. Because this refactoring doesn&#8217;t generate SQL like most, using LiquiBase commands such as migrateSQL may not work as expected. Therefore, if at all possible use refactorings that generate SQL.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>N</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/load_data.html">loadData</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Loads data from a CSV file into an existing table. A value of NULL in a cell will be converted to a database NULL rather than the string <em>NULL</em></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>N</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/load_update_data.html">loadUpdateData</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Loads or updates data from a CSV file into an existing table. Differs from loadData by issuing a SQL batch that checks for the existence of a record. If found, the record is UPDATEd, else the record is INSERTed. Also, generates DELETE statements for a rollback.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>N</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/sql.html">sql</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <em>sql</em> tag allows you to specify whatever sql you want. It is useful for complex changes that aren&#8217;t supported through Liquibase&#8217;s automated refactoring tags and to work around bugs and limitations of Liquibase. The SQL contained in the sql tag can be multi-line.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>N</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/sql_file.html">sqlFile</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The <em>sqlFile</em> tag allows you to specify any sql statements and have it stored external in a file. It is useful for complex changes that are not supported through LiquiBase&#8217;s automated refactoring tags such as stored procedures.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>N</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code><a href="http://www.liquibase.org/documentation/changes/tag_database.html">tagDatabase</a></code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Applies a tag to the database for future rollback</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>Y</code></p></td>
+</tr>
+</tbody>
+</table>
+</div></div>
+
+</div>
+</div>
+<div id="clearing-div" style="clear:both;"></div>
+</div>
+</div>
+<footer>
+<div class="mid">
+<a href="https://github.com/aparnachaudhary/liquibase-refcard"><img id="github" src="images/github.png"></a>
+Liquibase RefCard - revision 1.0.5-SNAPSHOT - 2015-11-21T10:04:13Z - Aparna Chaudhary
+</div>
+</footer>
+</body>
+</html>

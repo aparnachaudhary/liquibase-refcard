@@ -1,6 +1,6 @@
 == Liquibase RefCard ==
 
-This project creates a reference card for Liquibase.
+This project creates a reference card for Liquibase. http://aparnachaudhary.github.io/liquibase-refcard/
 
 === Build Status: ===
 

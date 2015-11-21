@@ -81,32 +81,42 @@
                     <templateEngine/>
                 </configuration>
             </plugin>
-            <plugin>
-                <!-- Deploy the web site -->
-                <groupId>com.github.github</groupId>
-                <artifactId>site-maven-plugin</artifactId>
-                <version>0.12</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>site</goal>
-                        </goals>
-                        <!-- select the Maven phase in which the plugin will be executed -->
-                        <phase>site</phase>
-                        <configuration>
-                            <server>github</server>
-                            <!-- The commit message -->
-                            <message>Deploying refcard</message>
-                            <!-- The location where the site is uploaded -->
-                            <outputDirectory>${slides.output}</outputDirectory>
-                            <!-- Use merge or override the content -->
-                            <merge>false</merge>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>publish</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <!-- Deploy the web site -->
+                        <groupId>com.github.github</groupId>
+                        <artifactId>site-maven-plugin</artifactId>
+                        <version>0.12</version>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>site</goal>
+                                </goals>
+                                <!-- select the Maven phase in which the plugin will be executed -->
+                                <phase>site</phase>
+                                <configuration>
+                                    <server>github</server>
+                                    <!-- The commit message -->
+                                    <message>Deploying refcard</message>
+                                    <!-- The location where the site is uploaded -->
+                                    <outputDirectory>${slides.output}</outputDirectory>
+                                    <!-- Use merge or override the content -->
+                                    <merge>false</merge>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
     <properties>
         <slides.input>${project.basedir}/src/slides</slides.input>
